@@ -1,4 +1,4 @@
-# Find Latest Tag
+# Find Latest Tag or Branch
 
 [![Run tests](https://github.com/tdemin/find-latest-tag/actions/workflows/test.yml/badge.svg)](https://github.com/tdemin/find-latest-tag/actions/workflows/test.yml)
 
