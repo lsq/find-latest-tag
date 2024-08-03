@@ -11,9 +11,18 @@ if [ -z "${query}" ]; then
     query=''
 fi
 
-all_tags="$(git ls-remote --tags --refs --exit-code --sort=-v:refname ${1} \
-    | grep -oE 'refs/tags/(.+)$' \
-    | sed 's/refs\/tags\///')"
+if [ -z "${repo}" ]; then
+  all_tags="$(git ls-remote --tags --heads --refs --exit-code --sort=-v:refname \
+      | grep -oE 'refs/tags/(.+)$|refs/heads/(.+)$' \
+      | sed 's/refs\/tags\///' \
+      | sed 's/refs\/heads\///')"
+    else
+  all_tags="$(git ls-remote --tags --heads --refs --exit-code --sort=-v:refname "${repo}" \
+      | grep -oE 'refs/tags/(.+)$|refs/heads/(.+)$' \
+      | sed 's/refs\/tags\///' \
+      | sed 's/refs\/heads\///')"
+fi
+
 
 tag="$(printf "%s\n" $all_tags \
     | grep -E "${query}" \
