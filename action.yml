@@ -1,4 +1,4 @@
-name: "Find Latest Tag of Git repository"
+name: "Find Latest Tag(master) of Git repository"
 description: "Find latest tag of any Git repository on the Internet"
 inputs:
   repo:
