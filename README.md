@@ -1,9 +1,11 @@
-# Find Latest Tag or Branch(Fork form tdemin/find-latest-tag)
+# Find Latest Tag or Branch
 
 [![Run tests](https://github.com/lsq/find-latest-tag/actions/workflows/test.yml/badge.svg)](https://github.com/lsq/find-latest-tag/actions/workflows/test.yml)
 
 GitHub Action to find latest tag of any Git repository available on the
-Internet.
+Internet(Fork from tdemin/find-latest-tag).
+
+Support both windows images and linux.
 
 ## Examples
 
@@ -12,7 +14,7 @@ steps:
   - uses: lsq/find-latest-tag@v1
     with:
       repo: https://github.com/lsq/vim-ming64-installer.git
-    # v0.4.0
+    # v9.1.0869
   - uses: lsq@find-latest-tag@v1
     with:
       repo: https://github.com/golang/go.git
