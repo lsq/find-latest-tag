@@ -1,6 +1,6 @@
-# Find Latest Tag or Branch
+# Find Latest Tag or Branch(Fork form tdemin/find-latest-tag)
 
-[![Run tests](https://github.com/tdemin/find-latest-tag/actions/workflows/test.yml/badge.svg)](https://github.com/tdemin/find-latest-tag/actions/workflows/test.yml)
+[![Run tests](https://github.com/lsq/find-latest-tag/actions/workflows/test.yml/badge.svg)](https://github.com/lsq/find-latest-tag/actions/workflows/test.yml)
 
 GitHub Action to find latest tag of any Git repository available on the
 Internet.
@@ -9,11 +9,11 @@ Internet.
 
 ```yml
 steps:
-  - uses: tdemin/find-latest-tag@v1
+  - uses: lsq/find-latest-tag@v1
     with:
-      repo: https://github.com/tdemin/gmnhg.git
+      repo: https://github.com/lsq/vim-ming64-installer.git
     # v0.4.0
-  - uses: tdemin@find-latest-tag@v1
+  - uses: lsq@find-latest-tag@v1
     with:
       repo: https://github.com/golang/go.git
       tag: '^go1'
