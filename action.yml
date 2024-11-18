@@ -24,4 +24,4 @@ runs:
       id: flt
 branding:
   icon: tag
-  color: black
+  color: red
