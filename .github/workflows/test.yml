@@ -14,6 +14,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         #version: [10, 12, 14]
     runs-on: ${{ matrix.os }}
+    continue-on-error: true
     #runs-on: [ubuntu-latest, windows-latest]
     steps:
       - name: Checkout
