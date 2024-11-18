@@ -24,4 +24,4 @@ jobs:
     - name: Update the ${{ env.TAG_NAME }} tag      
       uses: github-actions-publish/publish-action@v1    
       with:
-        source-tag: ${{ env.TAG_NAME }}
+        tag: ${{ env.TAG_NAME }}
