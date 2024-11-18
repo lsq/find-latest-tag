@@ -14,7 +14,12 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/find_latest_tag.sh '${{ inputs.repo }}' '${{ inputs.tag }}'
+    - run: |
+        actionPath="${{ github.action_path }}"
+        if [[ ${{ runner.os }} -eq 'Windows' ]];then
+          actionPath=$(cygpath -u "${{ github.action_path }}")
+        fi
+        "$actionPath"/find_latest_tag.sh '${{ inputs.repo }}' '${{ inputs.tag }}'
       shell: bash
       id: flt
 branding:
