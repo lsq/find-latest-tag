@@ -60,6 +60,7 @@ jobs:
           repo: https://github.com/golang/go.git
           tag: '^master$'
       - name: Test tags
+        shell: bash
         run: |
           ./test.sh "${{ steps.helmfile.outputs.tag }}" = "v0.144.0"
           ./test.sh "${{ steps.helmfile-v.outputs.tag }}" = "v0.144.0"
