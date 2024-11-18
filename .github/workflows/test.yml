@@ -29,7 +29,7 @@ jobs:
         uses: ./
         with:
           repo: https://github.com/vim/vim.git
-          tag: '^v'
+          tag: '^v9.1.0869'
       - name: Test latest tag of helmfile (with v, equivalent to just latest tag)
         id: helmfile-v
         uses: ./
